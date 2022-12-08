@@ -1,0 +1,21 @@
+---
+- name: Instalacao do pipx e httpie
+  hosts: arch
+
+  tasks:
+    - name: Instalacao das dependencias (arch)
+      become: yes
+      pacman:
+        update_cache: yes
+        name:
+          - base-devel
+          - openssl
+          - zlib
+          - xz
+          - tk
+
+    - name: Instalacao do pipx
+      become: yes
+      package:
+        name: python-pipx
+        state: present
