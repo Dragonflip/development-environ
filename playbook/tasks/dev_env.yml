@@ -1,0 +1,29 @@
+  - name: Instalacao das dependencias (arch)
+    become: yes
+    pacman:
+      update_cache: yes
+      name:
+        - base-devel
+        - openssl
+        - zlib
+        - xz
+        - tk
+
+  - name: Instalacao do git
+    become: yes
+    package:
+      name: git
+      state: present
+
+  - name: Instalacao do pipx
+    become: yes
+    package:
+      name: python-pipx
+      state: present
+
+  - name: Instalacao do httpie
+    become: yes
+    package:
+      name: httpie
+      state: present
+

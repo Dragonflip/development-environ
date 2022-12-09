@@ -1,0 +1,17 @@
+---
+- name: Configura o ambiente de desenvolvimento
+  hosts: dev
+  gather_facts: true
+
+  tasks:
+    - name:  Dependencias de desenvolvimento
+      become: true
+      import_tasks: tasks/dev_env.yml
+
+  roles:
+    - role: staticdev.pyenv
+      pyenv_env: user
+      pyenv_global:
+        - 3.11.0
+      pyenv_python_versions:
+        - 3.11.0

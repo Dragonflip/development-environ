@@ -1,0 +1,10 @@
+---
+- name: Instalacao de pacotes basicos para configuracao na maquina ansible_main
+  hosts: localhost
+
+  tasks:
+    - name: Instalando vim
+      become: yes
+      package:
+        name: vim
+        state: present
