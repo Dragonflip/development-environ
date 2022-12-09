@@ -35,7 +35,7 @@ sudo apt install vagrant  # Ubuntu
 ---
 ## Subindo maquinas virtuais
 ### Utilizando a combinação Vagrant + Virtualbox
-#### Para subir as máquinas utilizando o Vagrant podemos executar o seguinte comando (garantindo que a execução do comando esteja no mesmo diretório do arquivo [Vagrantfile](https://github.com/Dragonflip/development-environ/Vagrantfile))
+#### Para subir as máquinas utilizando o Vagrant podemos executar o seguinte comando (garantindo que a execução do comando esteja no mesmo diretório do arquivo [Vagrantfile](https://github.com/Dragonflip/development-environ/blob/main/Vagrantfile))
 ```
 vagrant up
 ```
