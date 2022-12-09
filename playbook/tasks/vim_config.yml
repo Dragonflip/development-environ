@@ -1,0 +1,12 @@
+
+  - name: Instalacao do vim
+    become: yes
+    package:
+      name: vim
+      state: present
+
+  - name: Instalacao do nvim
+    become: yes
+    package:
+      name: neovim
+      state: present

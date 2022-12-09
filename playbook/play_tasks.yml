@@ -6,7 +6,11 @@
   tasks:
     - name:  Dependencias de desenvolvimento
       become: true
-      import_tasks: tasks/dev_env.yml
+      import_tasks: tasks/python_env.yml
+
+    - name: Configurando o vim
+      become: true
+      import_tasks: tasks/vim_config.yml
 
   roles:
     - role: staticdev.pyenv
