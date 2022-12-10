@@ -11,13 +11,11 @@
       state: present
   
   - name: Baixando arquivos de configuracao
-    become: yes
     git:
       repo: https://github.com/Dragonflip/.dotfiles
       dest: ~/.config
 
   - name: Baixando packer nvim
-    become: yes
     git:
       repo: https://github.com/wbthomason/packer.nvim
       dest: ~/.local/share/nvim/site/pack/packer/start/packer.nvim
