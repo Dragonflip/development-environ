@@ -3,15 +3,10 @@
   hosts: dev
   gather_facts: true
 
-  tasks:
+  pre_tasks:
     - name:  Dependencias de desenvolvimento
       become: true
       import_tasks: tasks/python_env.yml
-  
-  pre_tasks:
-    - name: Configurando o vim
-      become: true
-      import_tasks: tasks/vim_config.yml
 
   roles:
     - role: staticdev.pyenv
@@ -20,3 +15,8 @@
         - 3.11.0
       pyenv_python_versions:
         - 3.11.0
+  
+  tasks:
+    - name: Configurando o vim
+      become: true
+      import_tasks: tasks/vim_config.yml
